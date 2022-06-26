@@ -28,7 +28,7 @@ env:
 jobs:
   Build:
     runs-on: self-hosted
-    if: github.repository == 'DHDAXCW/NanoPi-R4S'
+    if: github.repository == 'weikao/NanoPi-R4S'
     outputs:
       OPENWRTROOT: ${{ steps.update.outputs.OPENWRTROOT }}
       PLATFORM: ${{ steps.compile.outputs.PLATFORM }}
@@ -152,7 +152,7 @@ jobs:
           echo "::set-output name=release_tag::$(date +"%Y.%m.%d")-Lean2"
           echo "::set-output name=release_date::$(date +"%Y.%m.%d")"
           touch release.txt
-          echo "后台地址：192.168.11.1" >> release.txt
+          echo "后台地址：192.168.4.1" >> release.txt
           echo "::set-output name=status::success"
           
     - name: Upload firmware to release
